@@ -10,7 +10,7 @@ export default StyleSheet.create({
   innerContainer: {
     paddingHorizontal: 24,
     flex: 1,
-    justifyContent: "center",
+    // justifyContent: "center",
   },
   bigText: {
     ...typography.header32,

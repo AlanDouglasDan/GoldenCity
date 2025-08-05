@@ -15,8 +15,8 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { AuthStackNavParams } from "navigation/auth-stack/AuthStackNav";
 import { Button } from "components/Button";
+import { layout } from "core/styles";
 import styles from "./Properties.styles";
-import { layout } from "@src/core/styles";
 
 const Properties: FC<
   NativeStackScreenProps<AuthStackNavParams, "Properties">
@@ -182,7 +182,7 @@ const Properties: FC<
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <View style={[layout.spacedRow, { padding: 24 }]}>
+      <View style={[layout.spacedRow, { padding: 20 }]}>
         <Text style={styles.title}>Investment Properties</Text>
 
         <TouchableOpacity onPress={() => setShowFilters(!showFilters)}>
@@ -352,6 +352,7 @@ const Properties: FC<
                       </Text>
                     </View>
                   </View>
+
                   <View style={{ alignItems: "flex-end" }}>
                     <Text style={styles.label}>Annual ROI</Text>
                     <View style={styles.row}>
@@ -416,19 +417,15 @@ const Properties: FC<
                 </View>
 
                 {/* Button */}
-                <TouchableOpacity
-                  style={styles.button}
+                <Button
+                  title="Invest Now"
+                  suffixIcon={
+                    <Feather name="arrow-right" color="#fff" size={16} />
+                  }
                   onPress={() =>
                     navigation.navigate("Property Details", { id: property.id })
                   }
-                >
-                  <Text style={styles.buttonText}>Invest Now</Text>
-                  <Feather
-                    name="arrow-right"
-                    color="#fff"
-                    style={{ marginLeft: 8 }}
-                  />
-                </TouchableOpacity>
+                />
               </View>
             </TouchableOpacity>
           ))}

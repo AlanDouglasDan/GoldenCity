@@ -45,7 +45,7 @@ const Button: FC<ButtonProps> = ({
           disabled && styles.disabled,
           loading && styles.loading,
           !opaque && styles.transparent,
-          !opaque && common.shadow,
+          // !opaque && common.shadow,
           style,
         ]}
         onPress={onPress}
@@ -56,7 +56,7 @@ const Button: FC<ButtonProps> = ({
           style={[
             styles.buttonText,
             textStyle,
-            !opaque && { color: palette.BLACK },
+            !opaque && { color: "bluergb(0 110 255)" },
             disabled && { color: palette.GREY },
           ]}
         >

@@ -1,18 +1,20 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { palette, typography } from 'core/styles';
+import { palette } from "core/styles";
 
 export default StyleSheet.create({
   button: {
-    flexDirection: 'row',
-    marginTop: 20,
-    paddingVertical: 16,
-    paddingHorizontal: 32,
-    backgroundColor: palette.BLACK,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
+    backgroundColor: "#2563EB",
+    paddingVertical: 12,
+    borderRadius: 6,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 8,
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "600",
   },
   disabled: {
     backgroundColor: palette.DISABLED,
@@ -21,10 +23,6 @@ export default StyleSheet.create({
     opacity: 0.5,
   },
   transparent: {
-    backgroundColor: palette.WHITE,
-  },
-  buttonText: {
-    color: palette.WHITE,
-    ...typography.header18,
+    backgroundColor: "rgb(214 240 255)",
   },
 });

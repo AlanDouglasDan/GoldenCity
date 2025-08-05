@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { palette, typography, common } from "core/styles";
+import { palette, typography } from "core/styles";
 
 export default StyleSheet.create({
   mainContainer: {
@@ -12,8 +12,6 @@ export default StyleSheet.create({
     paddingHorizontal: 24,
     flex: 1,
     backgroundColor: "#eee",
-    // backgroundColor: "red",
-    // justifyContent: "center",
   },
   title: {
     ...typography.header24,
@@ -25,8 +23,6 @@ export default StyleSheet.create({
     backgroundColor: palette.WHITE,
     overflow: "hidden",
     marginBottom: 16,
-    // borderWidth: 1,
-    // borderColor: "#ddd",
   },
   imageContainer: {
     height: 192,
@@ -103,18 +99,6 @@ export default StyleSheet.create({
     borderRadius: 8,
     padding: 8,
     marginBottom: 8,
-  },
-  button: {
-    backgroundColor: "#2563EB",
-    paddingVertical: 12,
-    borderRadius: 6,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "#fff",
-    fontWeight: "600",
   },
 
   container: {
