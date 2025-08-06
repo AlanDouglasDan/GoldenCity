@@ -39,7 +39,7 @@ const Button: FC<ButtonProps> = ({
   return (
     <View style={containerStyle}>
       <TouchableOpacity
-        activeOpacity={disabled ? 1 : 0}
+        activeOpacity={disabled ? 1 : 0.6}
         style={[
           styles.button,
           disabled && styles.disabled,

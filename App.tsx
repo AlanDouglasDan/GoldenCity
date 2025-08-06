@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Host } from "react-native-portalize";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { AppNav } from "@src/navigation";
@@ -10,8 +11,10 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer ref={navigationRef}>
-        <StatusBar style="auto" />
-        <AppNav />
+        <Host>
+          <StatusBar style="auto" />
+          <AppNav />
+        </Host>
       </NavigationContainer>
     </GestureHandlerRootView>
   );

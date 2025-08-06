@@ -12,7 +12,7 @@ const Welcome: FC<NativeStackScreenProps<AuthStackNavParams, "Welcome">> = ({
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.innerContainer}>
-        <Text style={styles.bigText}>Welcome</Text>
+        <Text style={styles.bigText}>GoldenCity</Text>
 
         <Button
           title="Go To Properties"

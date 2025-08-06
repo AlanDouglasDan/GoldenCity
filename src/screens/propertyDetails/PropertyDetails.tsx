@@ -14,7 +14,8 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { AuthStackNavParams } from "navigation/auth-stack/AuthStackNav";
 import { Button } from "components/Button";
-import { common, layout, spacing } from "core/styles";
+import { property } from "core/constants";
+import { layout, spacing } from "core/styles";
 import styles from "./PropertyDetails.styles";
 
 const viewConfigRef = { viewAreaCoveragePercentThreshold: 95 };
@@ -24,77 +25,15 @@ const PropertyDetails: FC<
 > = ({ navigation, route }) => {
   const id = route.params.id ?? "";
 
-  const property = {
-    id,
-    title: "Modern Villa with Pool",
-    price: {
-      usd: 850000,
-      eth: 425,
-    },
-    location: "Beverly Hills, CA",
-    type: "villa",
-    roi: "7.2%",
-    metrics: {
-      totalInvestors: 142,
-      funded: "89%",
-      minInvestment: "$10",
-      monthlyIncome: "$520",
-      appreciation: "4.5%",
-      rentalYield: "5.8%",
-      totalReturn: "10.3%",
-    },
-    status: "Active Investment",
-    description:
-      "This stunning modern villa offers luxurious living spaces with high-end finishes throughout. The property has been tokenized for fractional ownership, allowing investors to participate in this premium real estate opportunity with as little as $10.",
-    features: [
-      "Swimming Pool",
-      "Smart Home System",
-      "Gourmet Kitchen",
-      "Home Theater",
-      "Wine Cellar",
-      "Outdoor Kitchen",
-      "Fire Pit",
-      "Three-Car Garage",
-    ],
-    tokenDetails: {
-      totalTokens: 85000,
-      availableTokens: 9350,
-      tokenPrice: "$10",
-      tokenSymbol: "VILLA425",
-      contractAddress: "0x1234...5678",
-      blockchain: "Ethereum",
-    },
-    financials: {
-      grossRent: "$8,500/month",
-      netRent: "$7,225/month",
-      expenses: {
-        management: "8%",
-        maintenance: "5%",
-        insurance: "2%",
-        property_tax: "1.2%",
-      },
-      projectedAppreciation: "4.5% annually",
-    },
-    yearBuilt: 2020,
-    parkingSpaces: 3,
-    lotSize: "0.5 acres",
-    images: [
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
-    ],
-    agent: {
-      name: "John Doe",
-      phone: "+1 (555) 123-4567",
-      email: "john@realestate.com",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-    },
-  };
-
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <View style={[layout.flexedRow, styles.gap, { padding: 20 }]}>
+      <View
+        style={[
+          layout.flexedRow,
+          styles.gap,
+          { paddingHorizontal: 20, paddingBottom: 16 },
+        ]}
+      >
         <Ionicons
           name="arrow-back"
           size={24}
