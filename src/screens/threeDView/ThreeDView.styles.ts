@@ -8,14 +8,18 @@ export default StyleSheet.create({
     backgroundColor: palette.WHITE,
   },
   innerContainer: {
-    paddingHorizontal: 24,
-    flex: 1,
+    // paddingHorizontal: 24,
+    // flex: 1,
     // justifyContent: "center",
   },
   bigText: {
     ...typography.header32,
-    color: palette.BLACK,
+    color: "#2563EB",
     textAlign: "center",
-    marginBottom: 24,
+    position: "absolute",
+    top: 20,
+    left: 0,
+    right: 0,
+    zIndex: 1,
   },
 });
